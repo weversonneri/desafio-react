@@ -7,8 +7,10 @@ import './styles.css';
 
 import products from '../../services/products.json';
 import { NavBar } from "../../components/NavBar";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
+  const { addToCart } = useCart();
 
   return (
     <>
@@ -32,13 +34,14 @@ export function Home() {
               </div>
               <button
                 className="card-button"
-                onClick={() => console.log(product.id)} >
+                onClick={() => addToCart(product)} >
                 Comprar
               </button>
             </div>
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
