@@ -8,11 +8,13 @@ function CartProvider({ children }) {
   const addToCart = (product) => setCart((currentCart) => [...currentCart, product]);
 
   const cartQuantityOfItem = (id) => cart.filter((product) => product.id === id).length;
+  const uniqueProduct = (product) => Array.from(new Set(product));
   return (
       cart,
       addToCart,
       cartQuantityOfItem,
       cartTotalPrice,
+      uniqueProduct
       {children}
     </CartContext.Provider>
   );
