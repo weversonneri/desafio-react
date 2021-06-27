@@ -1,0 +1,39 @@
+.nav-container {
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: #29292e;
+  font-size: 1.3rem;
+}
+
+.logo-text:hover {
+  color: black;
+}
+
+.cart-icon-container {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.cart-quantity {
+  color: white;
+  background: #29292e;
+  border-radius: 10px;
+  padding-right: 4px;
+  margin-left: -10px;
+}
+
+.cart-icon {
+  width: 30px;
+  height: 30px;
+}
