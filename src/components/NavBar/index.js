@@ -2,10 +2,12 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import { ReactComponent as CartIcon } from '../../assets/cart-icon.svg';
+import { useCart } from '../../context/cart';
 
 import './styles.css';
 
 export function NavBar() {
+  const { cart } = useCart();
   const history = useHistory();
 
   return (
@@ -24,7 +26,7 @@ export function NavBar() {
           title="Carrinho"
           onClick={() => { history.push('/checkout') }}
         />
-        <span className="cart-quantity"> 5 </span>
+        <span className="cart-quantity"> {cart.length} </span>
       </div>
     </nav>
   )
