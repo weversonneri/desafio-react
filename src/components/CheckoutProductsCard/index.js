@@ -2,7 +2,6 @@ import React from 'react'
 
 import './styles.css';
 
-import images from '../../assets/call-of-duty-infinite-warfare.png';
 import { formatCurrency } from '../../utils';
 
 
@@ -18,7 +17,7 @@ export function CheckoutProductsCard({
       <div className="checkout-card-img-name">
         <img
           className="checkout-product-img"
-          src={images}
+          src={require(`../../assets/${product.image}`).default}
           alt="Produto"
         />
         <h5>{product.name}</h5>
