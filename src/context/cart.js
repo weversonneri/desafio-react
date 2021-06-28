@@ -31,6 +31,7 @@ function CartProvider({ children }) {
     setCart(newCart);
   };
 
+  const cleanCart = () => setCart([]);
   const uniqueProduct = (product) => Array.from(new Set(product));
 
   return (
@@ -41,7 +42,7 @@ function CartProvider({ children }) {
       cartTotalPrice,
       removeItemFromCart,
       removeSigleFromCart,
-      uniqueProduct
+      cleanCart,
     }}>
       {children}
     </CartContext.Provider>
