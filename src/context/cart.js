@@ -5,7 +5,7 @@ const CartContext = createContext();
 function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  const cartTotalPrice = cart.reduce((accumPrice, { price }) => accumPrice + price, 0);
+  const cartSubTotalPrice = cart.reduce((accumPrice, { price }) => accumPrice + price, 0);
 
   const addToCart = (product) => setCart((currentCart) => [...currentCart, product]);
 
@@ -39,7 +39,7 @@ function CartProvider({ children }) {
       cart,
       addToCart,
       cartQuantityOfItem,
-      cartTotalPrice,
+      cartSubTotalPrice,
       removeItemFromCart,
       removeSigleFromCart,
       cleanCart,
