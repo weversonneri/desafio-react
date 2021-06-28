@@ -26,7 +26,10 @@ export function NavBar() {
           title="Carrinho"
           onClick={() => { history.push('/checkout') }}
         />
-        <span className="cart-quantity"> {cart.length} </span>
+        <span
+          onClick={() => { history.push('/checkout') }}
+          className="cart-quantity"
+        > {cart.length} </span>
       </div>
     </nav>
   )
