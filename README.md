@@ -4,7 +4,7 @@
 <p align="center">🚀 Desafio proposto como parte do processo seletivo da Supera Tecnologia .</p>
 
 ## 📃 Sobre
-O desafio consiste em construir a interface de um ecommerce de games utilizando ReactJs.
+O desafio consiste em construir a interface de um ecommerce de games utilizando ReactJs como parte do processo seletivo para desenvolvedor Javascript + React + React Native Trainee ou JR.
 
 
 ## 📚 Requisitos
