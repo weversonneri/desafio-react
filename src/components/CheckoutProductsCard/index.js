@@ -3,32 +3,42 @@ import React from 'react'
 import './styles.css';
 
 import images from '../../assets/call-of-duty-infinite-warfare.png';
-import { useCart } from '../../context/cart';
+import { formatCurrency } from '../../utils';
 
 
-export function CheckoutProductsCard(product) {
-  const { removeSigleFromCart, removeItemFromCart, cartQuantityOfItem } = useCart();
-
+export function CheckoutProductsCard({
+  addToCart,
+  cartQuantityOfItem,
+  removeSigleFromCart,
+  removeItemFromCart,
+  ...product
+}) {
   return (
     <div className="checkout-card">
-      <img
-        className="checkout-product-img"
-        src={images}
-        alt="Produto"
-      />
-      <div className="checkout-card-content">
+      <div className="checkout-card-img-name">
+        <img
+          className="checkout-product-img"
+          src={images}
+          alt="Produto"
+        />
         <h5>{product.name}</h5>
+      </div>
+      <div className="checkout-products-content">
+        <h4 className="checkout-products-price">{formatCurrency(product.price)}</h4>
         <div className="checkout-products-quantity">
-          <span>
-            <button onClick={() => removeSigleFromCart(product)}> - </button>
-          </span>
-          {cartQuantityOfItem(product.id)}
-          <span>
-            +
-          </span>
+          <div className="checkout-products-alter">
+            <button
+              className="checkout-products-decrease"
+              onClick={() => removeSigleFromCart(product)}> - </button>
+            {cartQuantityOfItem(product.id)}
+            <button
+              className="checkout-products-increase"
+              onClick={addToCart}> + </button>
+          </div>
+          <button
+            className="checkout-products-remove"
+            onClick={() => removeItemFromCart(product)}>Excluir</button>
         </div>
-        <h4>{product.price}</h4>
-        <button onClick={() => removeItemFromCart(product)}>remover</button>
       </div>
     </div>
   );

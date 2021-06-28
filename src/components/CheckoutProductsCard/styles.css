@@ -1,29 +1,123 @@
 .checkout-card {
   box-shadow: 0px 2px 8px 0px #b0bec5;
   border-radius: 5px;
-  min-width: 28rem;
+  padding: 10px;
+}
 
+.checkout-card-img-name {
   display: flex;
+  margin: 5px 0 ;
+  vertical-align: top;
 }
 
 .checkout-product-img {
-  width: 8rem;
-  height: 8rem;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+
+  margin-bottom: 10px;
+}
+
+.checkout-products-content {
+  border-top: 1px solid;
+  border-color: lightgray;
+  padding: 15px 0 5px;
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkout-products-quantity {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-products-decrease {
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-right: 8px;
+  background: #C4C4C4;
+
+  cursor: pointer;
+}
+
+.checkout-products-decrease:hover {
+  background: #979797;
+}
+
+.checkout-products-increase {
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  padding: 3px 8px;
+  margin-left: 8px;
+  background: #42A00A;
+
+  cursor: pointer;
+}
+
+.checkout-products-increase:hover {
+  background: #378609;
+}
+
+.checkout-products-remove {
+  color: #999999;
+  font-size: 0.7rem;
+  border-style: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.checkout-products-remove:hover {
+  color: #F95D3F;
 }
 
 /* Responsive */
 
 @media screen and (min-width: 640px) {
   .checkout-card {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    min-width: 14rem;
+    height: 100px;
   }
 
-  .checkout-product-img {
-    width: 8rem;
-    height: 8rem;
-    
+  .checkout-card-img-name {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: 5px 0;
+    align-items: center;
   }
+
+  .checkout-products-content {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+ 
+  .checkout-product-img {
+    width: 80px;
+    height: 80px;
+  
+    margin-bottom: 0;
+  }
+
+  .checkout-products-quantity {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
+  }
+
+  .checkout-products-remove{
+    margin: 5px 0 0;
+  }
+
 }
