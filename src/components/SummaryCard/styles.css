@@ -1,0 +1,37 @@
+.summary-subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.summary-qnt {
+  font-size: 0.8rem;
+}
+
+.summary-shipping {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid;
+  border-color: lightgray;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.summary-card-container {
+  box-shadow: 0px 2px 8px 0px #b0bec5;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.summary-shipping-calculator {
+  color: gray;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
